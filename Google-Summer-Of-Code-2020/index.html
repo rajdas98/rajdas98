@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Summber Of Code 2020 Report – Raj Babu Das – Software Builder</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Hello everyone, I am here to present my GSoC 2020 report under CNCF. My contributions/work can be viewed at  prometheus/test-infra and prombench.prometheus.io. Also I will be continuing my contributions after the GSoC period
+
+
+  I would like to give a huge thanks to my mentor, who continuously helped me to complete this awesome journey.
+
+" />
+    <meta property="og:description" content="Hello everyone, I am here to present my GSoC 2020 report under CNCF. My contributions/work can be viewed at  prometheus/test-infra and prombench.prometheus.io. Also I will be continuing my contributions after the GSoC period
+
+
+  I would like to give a huge thanks to my mentor, who continuously helped me to complete this awesome journey.
+
+" />
+    
+    <meta name="author" content="Raj Babu Das" />
+
+    
+    <meta property="og:title" content="Google Summber Of Code 2020 Report" />
+    <meta property="twitter:title" content="Google Summber Of Code 2020 Report" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Raj Babu Das - Software Builder" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars2.githubusercontent.com/u/20414564?s=460&u=3cd560c2a4521c109350f712792f64e740b478a1&v=4" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Raj Babu Das</a></h1>
+            <p class="site-description">Software Builder</p>
+          </div>
+
+          <nav>
+            <a href="/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Google Summber Of Code 2020 Report</h1>
+
+  <div class="entry">
+    <p>Hello everyone, I am here to present my GSoC 2020 report under CNCF. My contributions/work can be viewed at  <a href="https://github.com/prometheus/test-infra">prometheus/test-infra</a> and <a href="https://prombench.prometheus.io">prombench.prometheus.io</a>. Also I will be continuing my contributions after the GSoC period</p>
+
+<blockquote>
+  <p>I would like to give a huge thanks to my mentor, who continuously helped me to complete this awesome journey.</p>
+</blockquote>
+
+<h3 id="links">Links:</h3>
+<ul>
+  <li>My Evaluations:
+    <ul>
+      <li><a href="https://github.com/rajdas98/gsoc-2020-cncf/blob/master/evaluations/eval1.png">First Evaluation</a></li>
+      <li><a href="https://github.com/rajdas98/gsoc-2020-cncf/blob/master/evaluations/eval2.png">Second Evaluation</a></li>
+      <li><a href="https://github.com/rajdas98/gsoc-2020-cncf/blob/master/evaluations/eval1.png">Final Evaluation</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>GSoC Project URL <br />
+https://summerofcode.withgoogle.com/archive/2020/projects/4546170073907200/</p>
+  </li>
+  <li>
+    <p>CNCF Blog Post <br />
+https://www.cncf.io/blog/2020/09/17/16-cncf-interns-graduate-from-summer-of-code-gsoc-2020/</p>
+  </li>
+  <li>
+    <p>Certificate <br />
+<a href="https://github.com/rajdas98/gsoc-2020-cncf/blob/master/evaluations/Completion_2020_0234.pdf">Completion_2020_0234.pdf</a></p>
+  </li>
+  <li>Completion Letter <br />
+ <a href="https://github.com/rajdas98/gsoc-2020-cncf/blob/master/evaluations/Completion_2020_0234.pdf">GSoC 2020 Certificate GSoC20200234.pdf</a></li>
+</ul>
+
+<h3 id="what-did-i-solve">What did I solve?</h3>
+<ol>
+  <li>
+    <p>Develop prometheus benchmark infrastructure with KIND</p>
+
+    <p><b>Description:</b> Currently, prombench is deployed on GKE which takes a lot of time and resources. To overcome this we got a solution to use KIND for deployment of prombench on local/virtual machine, which is very fast as compared to GKE and useful to run it locally.</p>
+    <ul>
+      <li>Issue(s): <a href="https://github.com/prometheus/test-infra/issues/333" target="_blank">prometheus/test-infra/issue#333</a></li>
+      <li>PR(s): <a href="https://github.com/prometheus/test-infra/pull/390" target="_blank">prometheus/test-infra/pull#390</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Refactor prombench infrastructure and manifest deployable for KIND and EKS.</p>
+
+    <p><b>Description:</b> Due to the tightly coupled of prombench with GKE, we have to refactor both infra and manifests to make it more generic and deployable for both EKS and KIND.</p>
+    <ul>
+      <li>Issue(s): <a href="https://github.com/prometheus/test-infra/issues/371" target="_blank">prometheus/test-infra/issue#371</a></li>
+      <li>PR(s):
+        <ul>
+          <li><a href="https://github.com/prometheus/test-infra/pull/412" target="_blank">prometheus/test-infra/pull#412</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/pull/406" target="_blank">prometheus/test-infra/pull#406</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/pull/391" target="_blank">prometheus/test-infra/pull#391</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/pull/372" target="_blank">prometheus/test-infra/pull#371</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/pull/369" target="_blank">prometheus/test-infra/pull#369</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Fix Node Exporter to show the metrics related to SSD</p>
+
+    <p><b>Description:</b> Node Exporter is not showing metrics related to SSD. To fix this we need to upgrade node exporter and add a new flag called “–path.rootfs”</p>
+    <ul>
+      <li>Issue(s):
+        <ul>
+          <li><a href="https://github.com/prometheus/test-infra/issues/159" target="_blank">prometheus/test-infra/issue#159</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/issues/328" target="_blank">prometheus/test-infra/issue#328</a></li>
+        </ul>
+      </li>
+      <li>PR(s): <a href="https://github.com/prometheus/test-infra/pull/408" target="_blank">prometheus/test-infra/pull#408</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Add descriptions to the Grafana dashboard regarding prombench</p>
+
+    <p><b>Description:</b> Current Grafana dashboard is not having the descriptions of prombench, which will be difficult for a new user to understand.</p>
+    <ul>
+      <li>Issue(s):
+        <ul>
+          <li><a href="https://github.com/prometheus/test-infra/issues/328" target="_blank">prometheus/test-infra/issue#328</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/issues/305" target="_blank">prometheus/test-infra/issue#305</a></li>
+        </ul>
+      </li>
+      <li>Doc(s): <a href="https://docs.google.com/document/d/1FKLUkCcaTgC72Dh-Kz66228PykCwG4zy2Tw7zD_491k">Descriptions for Prombench Graphana Dashboard</a></li>
+      <li>PR(s): <a href="https://github.com/prometheus/test-infra/pull/428" target="_blank">prometheus/test-infra/pull#428</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Increase Retention period of loki to 90 days</p>
+
+    <p><b>Note:</b> This task is not a priority, so I will complete it after the gsoc period. BTW, a PR has been raised to solve this issue.</p>
+    <ul>
+      <li>Issue(s):
+        <ul>
+          <li><a href="https://github.com/prometheus/test-infra/issues/322" target="_blank">prometheus/test-infra/issue#322</a></li>
+          <li><a href="https://github.com/prometheus/test-infra/issues/328" target="_blank">prometheus/test-infra/issue#328</a></li>
+        </ul>
+      </li>
+      <li>PR(s): <a href="https://github.com/prometheus/test-infra/pull/423" target="_blank">prometheus/test-infra/pull#423</a></li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="extra-fixes">Extra fixes</h2>
+<ol>
+  <li>PR: <a href="https://github.com/prometheus/test-infra/pull/432">prometheus/test-infra/pull#432</a></li>
+  <li>PR: <a href="https://github.com/prometheus/test-infra/pull/433">prometheus/test-infra/pull#433</a></li>
+</ol>
+
+<h3 id="what-did-i-learn">What did I learn?</h3>
+<ol>
+  <li>First and most important- Architecture of Prometheus and infrastructure of prombench</li>
+  <li>Good maintenance of code repository</li>
+  <li>KIND(Kubernetes In Docker) architecture and usage of its go pkg.</li>
+  <li>Have patience for PR reviews :smiley:</li>
+</ol>
+
+<hr />
+
+  </div>
+
+  <div class="date">
+    Written on August 16, 2020
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:mail.rajdas@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/rajdas98"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/rajdas98"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="https://www.twitter.com/rajdas98"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-85069458-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/Google-Summer-Of-Code-2020/',
+		  'title': 'Google Summber Of Code 2020 Report'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>
